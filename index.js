@@ -63,6 +63,32 @@
 // const count1 = require("./counter.js");//common js import
 // console.log(count);
 
-const count = require("./counter.js");//common js import
-console.log(count);
+// const count = require("./counter.js");//common js import
+// console.log(count);
 
+
+console.log("Start");
+
+setTimeout(() => {
+  console.log("This runs after 3 seconds");
+}, 3000);
+
+console.log("End");
+
+function delay(ms) {
+  return new Promise((resolve) => {
+    setTimeout(resolve, ms);
+  });
+}
+
+async function run() {
+  console.log("Task 1");
+
+  await delay(2000); // 2 sec delay
+  console.log("Task 2 after 2 seconds");
+
+  await delay(3000); // 3 sec delay
+  console.log("Task 3 after 3 seconds");
+}
+
+run();
