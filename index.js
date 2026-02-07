@@ -67,28 +67,40 @@
 // console.log(count);
 
 
-console.log("Start");
+// console.log("Start");
 
-setTimeout(() => {
-  console.log("This runs after 3 seconds");
-}, 3000);
+// setTimeout(() => {
+//   console.log("This runs after 3 seconds");
+// }, 3000);
 
-console.log("End");
+// console.log("End");
 
-function delay(ms) {
-  return new Promise((resolve) => {
-    setTimeout(resolve, ms);
-  });
-}
+// function delay(ms) {
+//   return new Promise((resolve) => {
+//     setTimeout(resolve, ms);
+//   });
+// }
 
-async function run() {
-  console.log("Task 1");
+// async function run() {
+//   console.log("Task 1");
 
-  await delay(2000); // 2 sec delay
-  console.log("Task 2 after 2 seconds");
+//   await delay(2000); // 2 sec delay
+//   console.log("Task 2 after 2 seconds");
 
-  await delay(3000); // 3 sec delay
-  console.log("Task 3 after 3 seconds");
-}
+//   await delay(3000); // 3 sec delay
+//   console.log("Task 3 after 3 seconds");
+// }
 
-run();
+// run();
+
+let count = 0;
+
+const interval = setInterval(() => {
+  count++;
+  console.log("Count:", count);
+
+  if (count === 5) {
+    clearInterval(interval);
+    console.log("Interval stopped");
+  }
+}, 1000);
