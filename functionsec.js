@@ -52,3 +52,8 @@ console.log("Callback Result:", result);
 fetchData().then((data) => {
   console.log(data);
 });
+
+// Async function usage
+fetchData().then((data) => {
+  console.log(data);
+});
