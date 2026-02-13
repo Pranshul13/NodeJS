@@ -377,22 +377,31 @@
 // calculate();
 
 
-const step1 = () => Promise.resolve("Step 1 Done");
-const step2 = () => Promise.resolve("Step 2 Done");
-const step3 = () => Promise.resolve("Step 3 Done");
+// const step1 = () => Promise.resolve("Step 1 Done");
+// const step2 = () => Promise.resolve("Step 2 Done");
+// const step3 = () => Promise.resolve("Step 3 Done");
 
-const runSteps = async () => {
+// const runSteps = async () => {
 
-    console.log("Running Steps...");
-    let a = await step1();
-    console.log(a);
+//     console.log("Running Steps...");
+//     let a = await step1();
+//     console.log(a);
 
-    let b = await step2();
-    console.log(b);
+//     let b = await step2();
+//     console.log(b);
 
-    let c = await step3();
-    console.log(c);
+//     let c = await step3();
+//     console.log(c);
+// };
+// console.log("Start");
+// runSteps();
+// console.log("End");
+  
+
+const task1 = () => Promise.resolve("Task 1 done");
+const task2 = () => Promise.resolve("Task 2 done");
+
+const runSequential = async () => {
+    console.log(await task1());
+    console.log(await task2());
 };
-console.log("Start");
-runSteps();
-console.log("End");
